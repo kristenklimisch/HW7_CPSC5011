@@ -8,7 +8,7 @@ List<T>::List(int cap)
    capacity = cap;
 
    // allocate memory based on capacity
-   list = new int[cap];
+   list = new T[cap];
 
    // assign all values to zero
    for (int i = 0; i < cap; i++)
@@ -30,7 +30,7 @@ List<T>::List(const List<T>& obj)
    capacity = obj.capacity;
 
    // allocate memory based on capacity
-   list = new int[capacity];
+   list = new T[capacity];
 
    // copy over elements (from obj)
    for (int i = 0; i < numElements; i++)
@@ -50,7 +50,7 @@ List<T>& List<T>::operator=(const List<T>& obj)
       capacity = obj.capacity;
 
       // allocate memory based on capacity
-      list = new int[capacity];
+      list = new T[capacity];
 
       // copy over elements (from obj)
       for (int i = 0; i < numElements; i++)
@@ -60,14 +60,14 @@ List<T>& List<T>::operator=(const List<T>& obj)
 }
 
 template<class T>
-int& List<T>::operator[](const int& index)
+T& List<T>::operator[](const int& index)
 {
    assert(index >= 0 && index < capacity);
    return list[index];
 }
 
 template<class T>
-void List<T>::add(int el)
+void List<T>::add(T el)
 {
    // if the array is full, resize
    if (numElements >= capacity)
@@ -80,7 +80,7 @@ void List<T>::add(int el)
 }
 
 template<class T>
-int List<T>::get(int index) const
+T List<T>::get(int index) const
 {
    assert(index >= 0 && index < capacity);
    return list[index]; 
@@ -93,7 +93,7 @@ void List<T>::resize()
    capacity *= 2;
 
    // create new array based on updated capacity
-   int * tempArr = new int[capacity];
+   T * tempArr = new T[capacity];
 
    // copy old array values to new array
    int i = 0;
