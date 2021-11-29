@@ -1,3 +1,8 @@
+// Kristen Klimisch
+// CPSC 5011, Seattle University
+// List.cpp
+// Implementation file for the List class.
+
 #include "List.h"
 
 template<class T>

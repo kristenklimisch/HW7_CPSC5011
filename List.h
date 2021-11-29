@@ -1,5 +1,8 @@
+// Kristen Klimisch
+// CPSC 5011, Seattle University
 // List.h
 // Specification file for the List class.
+
 #ifndef LIST_H
 #define LIST_H
 
